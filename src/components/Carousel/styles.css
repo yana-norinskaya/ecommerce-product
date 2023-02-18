@@ -1,0 +1,15 @@
+.img_small {
+    @apply w-[90px] h-[90px] rounded-lg cursor-pointer transition-opacity
+}
+
+.img_small:hover {
+    @apply opacity-50
+}
+
+.focus {
+    @apply shadow-3xl
+}
+
+.selected_img {
+    @apply w-[440px] h-[440px] rounded-lg
+}

@@ -1,0 +1,39 @@
+header {
+    @apply w-full h-[80px] p-6 flex justify-between border-b;
+}
+
+.logo {
+    @apply w-[138px] h-[138px];
+}
+
+nav>ul {
+    @apply flex w-[400px] justify-between
+}
+
+nav>ul>li>a {
+    @apply text-slate-500 relative
+}
+
+.active::before {
+    @apply bg-orange-500 bottom-[-35px] content-[""] h-1 w-full absolute delay-75 animate-link-under
+}
+
+.avatar {
+    @apply w-full cursor-pointer rounded-[50%] object-cover
+}
+
+.wrap_avatar {
+    @apply rounded-[50px] transition-all w-[50px] flex items-center justify-center
+}
+
+.wrap_avatar:hover {
+    @apply shadow-3xl
+}
+
+.cart {
+    @apply cursor-pointer transition-all
+}
+
+.cart:hover {
+    @apply opacity-40
+}

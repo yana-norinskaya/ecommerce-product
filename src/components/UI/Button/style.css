@@ -1,0 +1,7 @@
+.btn_add {
+    @apply w-full shadow-btn bg-orange-950 rounded-md text-white flex justify-center items-center transition-all cursor-pointer p-2
+}
+
+.btn_add:hover {
+    @apply opacity-50
+}

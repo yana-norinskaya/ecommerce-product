@@ -1,0 +1,39 @@
+.cart_wrap {
+    @apply w-[320px] absolute top-16 right-0 bg-white shadow-modal rounded-xl p-5 animate-fade
+}
+
+.cart_image {
+    @apply relative cursor-pointer
+}
+
+.title {
+    @apply font-bold border-b-2 pb-2 flex justify-between items-center
+}
+
+.close {
+    @apply cursor-pointer transition-all
+}
+
+.close:hover {
+    @apply opacity-60
+}
+
+.description {
+    @apply text-center p-2 text-gray-400
+}
+
+.product_img {
+    @apply rounded-md h-10 w-10
+}
+
+.cart_delete {
+    @apply cursor-pointer transition-all
+}
+
+.cart_delete:hover {
+    @apply opacity-60
+}
+
+.cart_score {
+    @apply w-4 bg-orange-950 text-white rounded-xl absolute text-center text-xs left-3 bottom-3
+}
