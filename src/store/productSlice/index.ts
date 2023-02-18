@@ -29,8 +29,6 @@ export const productSlice = createSlice({
         decrement: (state) => {
             if (state.scoreCart !== 0) {
                 state.scoreCart -= 1
-            } else {
-                state.scoreCart = state.scoreCart
             }
         },
         savedScoreCart: (state, action: PayloadAction<number>) => {

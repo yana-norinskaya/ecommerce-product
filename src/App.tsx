@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Screen />} />
+        <Route path="/ecommerce-product" element={<Screen />} />
         <Route path="/collections" element={<Screen />} />
         <Route path="/men" element={<Screen />} />
         <Route path="/women" element={<Screen />} />
