@@ -9,14 +9,16 @@ interface IProductType {
     price: number,
     scoreCart: number,
     savedScoreCart: number,
-    isModalCart: boolean
+    isModalCart: boolean,
+    isModal: boolean
 }
 const initialState: IProductType = {
     data: products,
     price: 0,
     scoreCart: 0,
     savedScoreCart: 0,
-    isModalCart: false
+    isModalCart: false,
+    isModal: false,
 }
 
 export const productSlice = createSlice({
@@ -32,15 +34,21 @@ export const productSlice = createSlice({
             }
         },
         savedScoreCart: (state, action: PayloadAction<number>) => {
-            state.savedScoreCart = action.payload
-            state.scoreCart = 0
+            if(state.scoreCart !== 0){
+                state.savedScoreCart = action.payload
+                state.scoreCart = 0
+                state.isModal = true
+            }
         },
         deleteSavedScoreCart: (state) => {
             state.savedScoreCart = 0
         },
         toggleModalCart: (state) => {
             state.isModalCart = !state.isModalCart
-        }
+        },
+        toggleModal: (state) => {
+            state.isModal = false
+        },
     }
 
 })
@@ -50,6 +58,7 @@ export const {
     decrement,
     savedScoreCart,
     deleteSavedScoreCart,
-    toggleModalCart } = productSlice.actions;
+    toggleModalCart,
+    toggleModal } = productSlice.actions;
 
 export default productSlice.reducer;

@@ -1,20 +1,25 @@
 import { FC } from 'react';
+
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from "../../../store";
 import { deleteSavedScoreCart, toggleModalCart } from '../../../store/productSlice';
 
+import { Button } from '../../../components';
+
 import "./style.css";
+
 import deleteIcon from "../../../images/icon-delete.svg";
 import close from "../../../images/icon-close.svg";
-import { Button } from '../../UI/Button/Button';
 
 export const CartInside: FC = () => {
 
     const { data, savedScoreCart, isModalCart } = useSelector((state: RootState) => state.products);
+
     const renderAllSum = data[0].currentPrice * savedScoreCart;
-    const dispatch = useDispatch();
 
     const { src, name, currentPrice } = data[0];
+
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -39,7 +44,7 @@ export const CartInside: FC = () => {
                                     className="product_img" />
                                 <div>
                                     <p>{name}</p>
-                                    <span>${currentPrice} x {savedScoreCart}</span><span className='font-bold pl-1'>${renderAllSum}</span>
+                                    <span>${currentPrice}.00 x {savedScoreCart}</span><span className='font-bold pl-1'>${renderAllSum}.00</span>
                                 </div>
                                 <img
                                     src={deleteIcon}

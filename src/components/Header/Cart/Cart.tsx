@@ -2,15 +2,18 @@ import { FC } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModalCart } from '../../../store/productSlice';
+import { RootState } from '../../../store';
 
 import { CartInside } from './CartInside';
 
 import cart from "../../../images/icon-cart.svg";
-import { RootState } from '../../../store';
 
 export const Cart: FC = () => {
-    const { savedScoreCart } = useSelector((state: RootState) => state.products)
+
+    const { savedScoreCart } = useSelector((state: RootState) => state.products);
+
     const dispatch = useDispatch();
+
     return (
         <>
             <div className='cart_image' onClick={() => dispatch(toggleModalCart())}>
@@ -21,8 +24,6 @@ export const Cart: FC = () => {
                     </div>
                 }
             </div>
-
-
             <CartInside />
         </>
     )

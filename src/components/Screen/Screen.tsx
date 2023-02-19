@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Header } from "../Header/Header";
-import { Main } from "../Main/Main";
+
+import { Header, Main } from "../../components";
 
 export const Screen: FC = () => {
     return (

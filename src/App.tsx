@@ -1,6 +1,8 @@
 import React from 'react';
-import { Screen } from './components/Screen/Screen';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Screen } from './components';
 
 function App() {
   return (

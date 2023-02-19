@@ -1,9 +1,10 @@
 import { FC } from "react";
+
+import { Navigation, Cart, Avatar } from "../../components";
+
 import "./styles.css";
+
 import logo from "../../images/logo.svg";
-import { Navigation } from "./Navigation/Navigation";
-import { Cart } from "./Cart/Cart";
-import { Avatar } from "./Avatar/Avatar";
 
 export const Header: FC = () => {
     return (

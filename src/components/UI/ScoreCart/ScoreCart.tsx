@@ -1,12 +1,16 @@
 import { FC } from "react";
-import minus from "../../../images/icon-minus.svg";
-import plus from "../../../images/icon-plus.svg";
+
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from "../../../store";
 import { decrement, increment } from "../../../store/productSlice";
 
+import minus from "../../../images/icon-minus.svg";
+import plus from "../../../images/icon-plus.svg";
+
 export const ScoreCart: FC = () => {
+
     const { scoreCart } = useSelector((state: RootState) => state.products);
+
     const dispatch = useDispatch();
 
     return (

@@ -4,15 +4,15 @@ import type { RootState } from '../../store';
 import { useSelector, useDispatch } from 'react-redux';
 import { savedScoreCart } from '../../store/productSlice';
 
-import { Carousel } from '../Carousel/Carousel';
-import { InfoProduct } from "./InfoProduct/InfoProduct";
-import { ScoreCart } from '../UI/ScoreCart/ScoreCart';
-import { Button } from '../UI/Button/Button';
+import { Carousel, InfoProduct, ScoreCart, Button, Modal } from '../../components';
+
 import cart from "../../images/white-cart.svg";
 
 export const Main: FC = () => {
     const { scoreCart } = useSelector((state: RootState) => state.products);
+
     const dispatch = useDispatch();
+
     return (
         <div className='w-[1000px] m-auto flex justify-between items-center mt-10'>
             <Carousel />
@@ -26,6 +26,7 @@ export const Main: FC = () => {
                     </Button>
                 </div>
             </div>
+            <Modal/>
         </div>
     )
 }

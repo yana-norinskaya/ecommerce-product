@@ -28,6 +28,14 @@ module.exports = {
           from: { width: 0 },
           to: { width: "100%" },
         },
+        modal: {
+          from: {
+            right: "-400px"
+          },
+          to: {
+            right: "-50px"
+          }
+        },
         borders: {
           from: {
             border: "none"
@@ -40,7 +48,8 @@ module.exports = {
       animation: {
         'link-under': 'link 300ms',
         "border-avatar": 'borders 300ms',
-        "fade": "fade 400ms"
+        "fade": "fade 400ms",
+        "open-modal": "modal 500ms",
       },
     },
   },

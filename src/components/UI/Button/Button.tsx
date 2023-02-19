@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
-import "./style.css";
 
+import "./style.css";
 
 interface IButton {
     children: ReactNode,
